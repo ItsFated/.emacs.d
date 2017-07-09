@@ -101,7 +101,8 @@
 (defun open-my-init-file()
   (interactive)
   (find-file "~/.emacs.d/init.el"))
-(global-set-key (kbd "<f2>") 'open-my-init-file)
+(global-set-key (kbd "M-m") nil)
+(global-set-key (kbd "M-m f e d") 'open-my-init-file)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
