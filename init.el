@@ -56,7 +56,8 @@
 				 swiper
 				 counsel
 				 js2-mode
-				 nodejs-repl 
+				 nodejs-repl
+				 idea-darkula-theme
 				 )  "Default packages")
 (setq package-selected-packages zilongshanren/packages)
 (defun zilongshanren/packages-installed-p ()
@@ -71,6 +72,9 @@
       (package-install pkg))))
 
 ;; these settings depend packages
+;; theme
+(push (substitute-in-file-name "~/.emacs.d/idea-darkula-theme/") custom-theme-load-path)
+(load-theme 'idea-darkula t)
 ;; hungry-delete
 (hungry-delete-mode 1)
 ;; swiper
