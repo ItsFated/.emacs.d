@@ -7,8 +7,9 @@
 (line-number-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
-(global-company-mode 1)
 
+;; 停止烦人的错误提示音
+(setq ring-bell-function 'ignore)
 
 ;; 高亮当前行
 (global-hl-line-mode 1)
@@ -72,6 +73,8 @@
       (package-install pkg))))
 
 ;; these settings depend packages
+;; company mode
+(global-company-mode 1)
 ;; theme
 (push (substitute-in-file-name "~/.emacs.d/idea-darkula-theme/") custom-theme-load-path)
 (load-theme 'idea-darkula t)
