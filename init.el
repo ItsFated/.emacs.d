@@ -85,7 +85,7 @@
 (push (substitute-in-file-name "~/.emacs.d/idea-darkula-theme/") custom-theme-load-path)
 (load-theme 'idea-darkula t)
 ;; hungry-delete
-(hungry-delete-mode 1)
+(global-hungry-delete-mode 1)
 ;; swiper
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
@@ -116,6 +116,13 @@
   (find-file "~/.emacs.d/init.el"))
 (global-set-key (kbd "M-m") nil)
 (global-set-key (kbd "M-m f e d") 'open-my-init-file)
+(defun kill-other-buffers()
+  "Kill all buffers without current buffer."
+  (interactive)
+  (delete-other-windows)
+  (let ((current (buffer-name)))
+    (mapcar 'kill-buffer (cdr (buffer-list)))))
+(global-set-key (kbd "C-c k") 'kill-other-buffers)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
