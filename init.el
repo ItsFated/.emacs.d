@@ -7,6 +7,7 @@
 (line-number-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
+(fset 'yes-or-no-p 'y-or-n-p)
 
 ;; 停止烦人的错误提示音
 (setq ring-bell-function 'ignore)
