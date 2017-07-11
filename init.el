@@ -127,6 +127,7 @@
     (mapcar 'kill-buffer (cdr (buffer-list)))))
 (global-set-key (kbd "C-c k") 'kill-other-buffers)
 (global-set-key (kbd "C-z") 'undo)
+(global-set-key [(control \`)] 'eshell)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
