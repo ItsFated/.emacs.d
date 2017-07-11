@@ -125,6 +125,7 @@
   (let ((current (buffer-name)))
     (mapcar 'kill-buffer (cdr (buffer-list)))))
 (global-set-key (kbd "C-c k") 'kill-other-buffers)
+(global-set-key (kbd "C-z") 'undo)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
