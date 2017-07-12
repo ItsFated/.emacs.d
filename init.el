@@ -8,6 +8,7 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (fset 'yes-or-no-p 'y-or-n-p)
+(global-auto-revert-mode 1)
 ;; Linum mode
 (add-hook 'org-mode-hook 'linum-mode)
 (add-hook 'prog-mode-hook 'linum-mode)
@@ -63,6 +64,7 @@
 				 js2-mode
 				 nodejs-repl
 				 idea-darkula-theme
+				 popwin
 				 )  "Default packages")
 (setq package-selected-packages zilongshanren/packages)
 (defun zilongshanren/packages-installed-p ()
@@ -77,6 +79,9 @@
       (package-install pkg))))
 
 ;; these settings depend packages
+;; popwin
+(require 'popwin)
+(popwin-mode 1)
 ;; company mode
 (global-company-mode 1)
 (with-eval-after-load 'company
