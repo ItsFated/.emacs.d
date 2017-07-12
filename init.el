@@ -65,6 +65,7 @@
 				 nodejs-repl
 				 idea-darkula-theme
 				 popwin
+				 expand-region
 				 )  "Default packages")
 (setq package-selected-packages zilongshanren/packages)
 (defun zilongshanren/packages-installed-p ()
@@ -79,6 +80,9 @@
       (package-install pkg))))
 
 ;; these settings depend packages
+;; expand-region
+(require 'expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
 ;; popwin
 (require 'popwin)
 (popwin-mode 1)
