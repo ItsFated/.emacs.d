@@ -3,8 +3,13 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+	hungry-delete-backward
+	undefined
 	))
 
 (setq mc/cmds-to-run-once
       '(
+	keyboard-escape-quit
+	list-directory
+	shell-command
 	))

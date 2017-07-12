@@ -140,7 +140,19 @@
 (global-set-key (kbd "C-c k") 'kill-other-buffers)
 (global-set-key (kbd "C-z") 'undo)
 (global-set-key [(control \`)] 'eshell)
-
+(defun occur-dwim ()
+  "Call `occur' with a sane default."
+  (interactive)
+  (push (if (region-active-p)
+	    (buffer-substring-no-properties
+	     (region-beginning)
+	     (region-end))
+	  (let ((sym (thing-at-point 'symbol)))
+	    (when (stringp sym)
+	      (regexp-quote sym))))
+	regexp-history)
+  (call-interactively 'occur))
+(global-set-key "M-s o" 'occur-dwim)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
