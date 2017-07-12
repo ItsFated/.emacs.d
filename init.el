@@ -66,6 +66,7 @@
 				 idea-darkula-theme
 				 popwin
 				 expand-region
+				 multiple-cursors
 				 )  "Default packages")
 (setq package-selected-packages zilongshanren/packages)
 (defun zilongshanren/packages-installed-p ()
@@ -80,6 +81,8 @@
       (package-install pkg))))
 
 ;; these settings depend packages
+;; multiple-cursors
+(global-set-key (kbd "C-;") 'mc/mark-all-dwim)
 ;; expand-region
 (require 'expand-region)
 (global-set-key (kbd "C-=") 'er/expand-region)
