@@ -98,7 +98,7 @@
 (global-set-key (kbd "C-x C-f") 'counsel-find-file)
 ;; smartparens
 (require 'smartparens-config)
-(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
+(add-hook 'prog-mode-hook 'smartparens-mode)
 ;; js2-mode
 ;; nodejs-repl
 (require 'nodejs-repl)
