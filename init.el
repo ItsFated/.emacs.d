@@ -152,7 +152,7 @@
 	      (regexp-quote sym))))
 	regexp-history)
   (call-interactively 'occur))
-(global-set-key "M-s o" 'occur-dwim)
+(global-set-key (kbd "M-s o") 'occur-dwim)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
