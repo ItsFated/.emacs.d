@@ -48,6 +48,8 @@
 (setq ivy-use-virtual-buffers t)
 (setq enable-recursive-minibuffers t)
 ;; smartparens
+;; (smartparens-global-mode 1)
 (add-hook 'prog-mode-hook 'smartparens-mode)
+(with-eval-after-load 'smartparens (sp-local-pair '(emacs-lisp-mode lisp-interaction-mode) "'" nil :actions nil))
 
 (provide 'init-packages)
