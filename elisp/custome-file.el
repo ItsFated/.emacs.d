@@ -5,7 +5,10 @@
  ;; If there is more than one, they won't work right.
  '(company-idle-delay 0)
  '(company-minimum-prefix-length 1)
- '(company-tooltip-idle-delay 0))
+ '(company-tooltip-idle-delay 0)
+ '(speedbar-directory-unshown-regexp "^\\[ \\]&")
+ '(speedbar-file-unshown-regexp "^\\[ \\]&")
+ '(sr-speedbar-right-side nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
