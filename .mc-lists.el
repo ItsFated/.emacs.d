@@ -4,12 +4,12 @@
 (setq mc/cmds-to-run-for-all
       '(
 	hungry-delete-backward
-	undefined
+	hungry-delete-forward
+	indent-for-tab-command
+	kill-region
 	))
 
 (setq mc/cmds-to-run-once
       '(
-	keyboard-escape-quit
-	list-directory
-	shell-command
+	counsel-M-x
 	))
