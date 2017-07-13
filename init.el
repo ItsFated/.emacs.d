@@ -67,6 +67,7 @@
 				 popwin
 				 expand-region
 				 multiple-cursors
+				 flycheck
 				 )  "Default packages")
 (setq package-selected-packages zilongshanren/packages)
 (defun zilongshanren/packages-installed-p ()
@@ -81,6 +82,8 @@
       (package-install pkg))))
 
 ;; these settings depend packages
+;; flycheck
+(global-flycheck-mode 1)
 ;; multiple-cursors
 (global-set-key (kbd "C-;") 'mc/mark-all-dwim)
 ;; expand-region
