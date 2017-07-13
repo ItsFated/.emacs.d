@@ -38,14 +38,13 @@
 ;; 自动保存文件
 (setq auto-save-default nil)
 
-
-
 ;; 保留最近打开的文件
 (require 'recentf)
 (recentf-mode 1)
 (setq recentf-max-menu-items 20)
 
 (require 'dired)
+(setq dired-dwim-target t);; 如果分屏显示两个 DiredBuffer 则拷贝就会直接拷贝到另一 DiredBuffer 目录下
 (setq dired-recursive-deletes 'always);; 递归删除
 (setq dired-recursive-copies 'always);; 递归拷贝
 (put 'dired-find-alternate-file 'disabled nil); 去掉 (dired-find-alternate-file) 函数的警告

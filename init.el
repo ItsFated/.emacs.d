@@ -1,7 +1,7 @@
 (package-initialize)
 (add-to-list 'load-path "~/.emacs.d/elisp")
-(require 'init-better-default)
 (require 'init-packages)
+(require 'init-better-default)
 (require 'init-org)
 (require 'init-ui)
 (require 'init-functions)
