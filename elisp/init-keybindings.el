@@ -5,9 +5,11 @@
 (global-set-key (kbd "M-m f e d") 'open-my-init-file)
 (global-set-key (kbd "C-c k") 'kill-other-buffers)
 (global-set-key (kbd "C-z") 'undo)
-(global-set-key [(control \`)] 'eshell)
+(global-set-key [(control \`)] 'sr-speedbar-toggle)
 (global-set-key (kbd "M-s o") 'occur-dwim)
 (global-set-key (kbd "C-d") 'sp-kill-whole-line)
+(define-key help-mode-map (kbd "n") 'next-completion)
+(define-key help-mode-map (kbd "p") 'previous-completion)
 
 ;; 第三方
 (global-set-key (kbd "C-;") 'mc/mark-all-dwim)
@@ -15,6 +17,8 @@
 (global-set-key (kbd "C-s") 'swiper)
 (global-set-key (kbd "M-x") 'counsel-M-x)
 (global-set-key (kbd "C-x C-f") 'counsel-find-file)
+(global-set-key (kbd "C-h f") 'counsel-describe-function)
+(global-set-key (kbd "C-h v") 'counsel-describe-variable)
 
 (add-hook 'js-mode-hook
           (lambda ()

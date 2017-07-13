@@ -50,6 +50,9 @@
 (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file);在当前DiredBuffer打开文件
 (define-key dired-mode-map (kbd "^") (lambda () (interactive) (find-alternate-file "..")));返回上一层使用当前 DiredBuffer
 
+;; 设置Speedbar默认显示所有文件
+(with-eval-after-load 'speedbar (setq speedbar-show-unknown-files t))
+
 ;; 文件关联 major-mode
 (setq auto-mode-alist
       (append

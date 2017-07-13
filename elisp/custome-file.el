@@ -6,6 +6,7 @@
  '(company-idle-delay 0)
  '(company-minimum-prefix-length 1)
  '(company-tooltip-idle-delay 0)
+ '(help-window-select t)
  '(speedbar-directory-unshown-regexp "^\\[ \\]&")
  '(speedbar-file-unshown-regexp "^\\[ \\]&")
  '(sr-speedbar-right-side nil))

@@ -17,7 +17,6 @@
 		      js2-mode
 		      nodejs-repl
 		      idea-darkula-theme
-		      popwin
 		      expand-region
 		      multiple-cursors
 		      sr-speedbar
@@ -36,9 +35,6 @@
 
 ;; multiple-cursors
 ;; expand-region
-;; popwin
-(require 'popwin)
-(popwin-mode 1)
 ;; company mode
 (global-company-mode 1)
 ;; hungry-delete
