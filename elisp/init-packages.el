@@ -20,6 +20,7 @@
 		      popwin
 		      expand-region
 		      multiple-cursors
+		      sr-speedbar
 		      flycheck) "Default packages")
 (setq package-selected-packages my-packages)
 (defun install-my-packages ()
