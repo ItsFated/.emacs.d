@@ -39,7 +39,6 @@
 (setq auto-save-default nil)
 
 ;; 保留最近打开的文件
-(require 'recentf)
 (recentf-mode 1)
 (setq recentf-max-menu-items 20)
 
