@@ -11,5 +11,9 @@
 
 (setq mc/cmds-to-run-once
       '(
+	beginning-of-buffer
 	counsel-M-x
+	end-of-buffer
+	swiper
+	undefined
 	))

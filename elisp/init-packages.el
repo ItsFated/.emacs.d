@@ -20,6 +20,7 @@
 		      expand-region
 		      multiple-cursors
 		      sr-speedbar
+		      youdao-dictionary
 		      flycheck) "Default packages")
 (setq package-selected-packages my-packages)
 (defun install-my-packages ()
@@ -46,6 +47,17 @@
 ;; smartparens
 ;; (smartparens-global-mode 1)
 (add-hook 'prog-mode-hook 'smartparens-mode)
-(with-eval-after-load 'smartparens (sp-local-pair '(emacs-lisp-mode lisp-interaction-mode) "'" nil :actions nil))
+(with-eval-after-load 'smartparens
+  (sp-local-pair '(emacs-lisp-mode lisp-interaction-mode) "'" nil :actions nil))
+
+;; youdao dictionary
+;; Enable Cache
+(setq url-automatic-caching t)
+;; Integrate with popwin-el (https://github.com/m2ym/popwin-el)
+;; (push "*Youdao Dictionary*" popwin:special-display-config)
+;; Set file path for saving search history
+(setq youdao-dictionary-search-history-file "~/.emacs.d/.youdao")
+;; Enable Chinese word segmentation support (支持中文分词)
+;; (setq youdao-dictionary-use-chinese-word-segmentation t)
 
 (provide 'init-packages)
