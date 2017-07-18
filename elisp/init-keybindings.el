@@ -20,7 +20,7 @@
 (global-set-key (kbd "C-h f") 'counsel-describe-function)
 (global-set-key (kbd "C-h v") 'counsel-describe-variable)
 (global-set-key (kbd "M-j") 'mc/mark-next-like-this)
-
+(global-set-key (kbd "M-s y") 'youdao-dictionary-search-at-point)
 (add-hook 'js-mode-hook
           (lambda ()
             (define-key js-mode-map (kbd "C-x C-e") 'nodejs-repl-send-last-sexp)
