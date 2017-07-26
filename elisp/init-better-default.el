@@ -58,5 +58,7 @@
       (append
        '(("\\.js\\'" . js2-mode))
        auto-mode-alist))
+;; 制表符改为空格
+(setq-default indent-tabs-mode nil)
 
 (provide 'init-better-default)
