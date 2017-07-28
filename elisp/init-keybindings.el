@@ -27,11 +27,11 @@
 (add-hook 'js-mode-hook
           (lambda ()
             (define-key js-mode-map (kbd "C-x C-e") 'nodejs-repl-send-last-sexp)
-	    (define-key js-mode-map (kbd "C-c C-b") 'nodejs-repl-send-buffer)
+            (define-key js-mode-map (kbd "C-c C-b") 'nodejs-repl-send-buffer)
             (define-key js-mode-map (kbd "C-c C-r") 'nodejs-repl-send-region)
             (define-key js-mode-map (kbd "C-c C-l") 'nodejs-repl-load-file)
             (define-key js-mode-map (kbd "C-c C-z") 'nodejs-repl-switch-to-repl)
-	    (define-key js-mode-map (kbd "C-c C-c") 'nodejs-repl-quit-or-cancel)))
+            (define-key js-mode-map (kbd "C-c C-c") 'nodejs-repl-quit-or-cancel)))
 
 (with-eval-after-load 'company
   (define-key company-active-map (kbd "M-n") nil)

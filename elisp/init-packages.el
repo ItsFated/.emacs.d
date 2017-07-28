@@ -27,8 +27,8 @@
 (setq package-selected-packages my-packages)
 (defun install-my-packages ()
   (loop for pkg in my-packages
-	when (not (package-installed-p pkg)) do (return nil)
-	finally (return t)))
+        when (not (package-installed-p pkg)) do (return nil)
+        finally (return t)))
 (unless (install-my-packages)
   (message "%s" "Refreshing package database...")
   (package-refresh-contents)
@@ -85,9 +85,7 @@
 (add-hook 'js2-mode-hook #'js2-refactor-mode)
 ;; web-mode
 (add-hook 'web-mode-hook (lambda ()
-			   ;; Highlight current HTML element (see web-mode-current-element-highlight-face)
-			   (setq web-mode-enable-current-element-highlight t)
-			   ;; You can also highlight the current column with
-			   (setq web-mode-enable-current-column-highlight t)))
+                           (setq web-mode-enable-current-element-highlight t)
+                           (setq web-mode-enable-current-column-highlight t)))
 
 (provide 'init-packages)
