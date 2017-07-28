@@ -3,20 +3,20 @@
 
 (setq mc/cmds-to-run-for-all
       '(
-        hungry-delete-backward
-        hungry-delete-forward
-        indent-for-tab-command
-        kill-region
-        org-beginning-of-line
-        org-cycle
-        org-self-insert-command
-        ))
+	hungry-delete-backward
+	hungry-delete-forward
+	indent-for-tab-command
+	kill-region
+	org-beginning-of-line
+	org-cycle
+	org-self-insert-command
+	))
 
 (setq mc/cmds-to-run-once
       '(
-        beginning-of-buffer
-        counsel-M-x
-        end-of-buffer
-        swiper
-        undefined
-        ))
+	beginning-of-buffer
+	counsel-M-x
+	end-of-buffer
+	occur-dwim
+	swiper
+	))

@@ -16,11 +16,13 @@
 (global-set-key (kbd "C-=") 'er/expand-region)
 (global-set-key (kbd "C-s") 'swiper)
 (global-set-key (kbd "M-x") 'counsel-M-x)
+(global-set-key (kbd "M-s i") 'counsel-imenu)
 (global-set-key (kbd "C-x C-f") 'counsel-find-file)
 (global-set-key (kbd "C-h f") 'counsel-describe-function)
 (global-set-key (kbd "C-h v") 'counsel-describe-variable)
 (global-set-key (kbd "M-j") 'mc/mark-next-like-this)
 (global-set-key (kbd "M-s y") 'youdao-dictionary-search-at-point)
+(js2r-add-keybindings-with-prefix "C-c m")
 (add-hook 'js-mode-hook
           (lambda ()
             (define-key js-mode-map (kbd "C-x C-e") 'nodejs-repl-send-last-sexp)

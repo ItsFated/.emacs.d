@@ -10,18 +10,20 @@
 ;; 自动安装没有安装的Package
 (eval-when-compile (require 'cl))
 (defvar my-packages '(company
-		      hungry-delete
-		      smartparens
-		      swiper
-		      counsel
-		      js2-mode
-		      nodejs-repl
-		      idea-darkula-theme
-		      expand-region
-		      multiple-cursors
-		      sr-speedbar
-		      youdao-dictionary
-		      flycheck) "Default packages")
+                      hungry-delete
+                      smartparens
+                      swiper
+                      counsel
+                      js2-mode
+                      js2-refactor
+                      web-mode
+                      nodejs-repl
+                      idea-darkula-theme
+                      expand-region
+                      multiple-cursors
+                      sr-speedbar
+                      youdao-dictionary
+                      flycheck) "Default packages")
 (setq package-selected-packages my-packages)
 (defun install-my-packages ()
   (loop for pkg in my-packages
@@ -59,5 +61,33 @@
 (setq youdao-dictionary-search-history-file "~/.emacs.d/.youdao")
 ;; Enable Chinese word segmentation support (支持中文分词)
 ;; (setq youdao-dictionary-use-chinese-word-segmentation t)
+
+;; js2-mode
+(defun js2-imenu-make-index ()
+  (interactive)
+  (save-excursion
+    ;; (setq imenu-generic-expression '((nil "describe\\(\"\\(.+\\)\"" 1)))
+    (imenu--generic-function '(("describe" "\\s-*describe\\s-*(\\s-*[\"']\\(.+\\)[\"']\\s-*,.*" 1)
+                               ("it" "\\s-*it\\s-*(\\s-*[\"']\\(.+\\)[\"']\\s-*,.*" 1)
+                               ("test" "\\s-*test\\s-*(\\s-*[\"']\\(.+\\)[\"']\\s-*,.*" 1)
+                               ("before" "\\s-*before\\s-*(\\s-*[\"']\\(.+\\)[\"']\\s-*,.*" 1)
+                               ("after" "\\s-*after\\s-*(\\s-*[\"']\\(.+\\)[\"']\\s-*,.*" 1)
+                               ("Function" "function[ \t]+\\([a-zA-Z0-9_$.]+\\)[ \t]*(" 1)
+                               ("Function" "^[ \t]*\\([a-zA-Z0-9_$.]+\\)[ \t]*=[ \t]*function[ \t]*(" 1)
+                               ("Function" "^var[ \t]*\\([a-zA-Z0-9_$.]+\\)[ \t]*=[ \t]*function[ \t]*(" 1)
+                               ("Function" "^[ \t]*\\([a-zA-Z0-9_$.]+\\)[ \t]*()[ \t]*{" 1)
+                               ("Function" "^[ \t]*\\([a-zA-Z0-9_$.]+\\)[ \t]*:[ \t]*function[ \t]*(" 1)
+                               ("Task" "[. \t]task([ \t]*['\"]\\([^'\"]+\\)" 1)))))
+(add-hook 'js2-mode-hook
+          (lambda ()
+            (setq imenu-create-index-function 'js2-imenu-make-index)))
+;; js2-refactor
+(add-hook 'js2-mode-hook #'js2-refactor-mode)
+;; web-mode
+(add-hook 'web-mode-hook (lambda ()
+			   ;; Highlight current HTML element (see web-mode-current-element-highlight-face)
+			   (setq web-mode-enable-current-element-highlight t)
+			   ;; You can also highlight the current column with
+			   (setq web-mode-enable-current-column-highlight t)))
 
 (provide 'init-packages)

@@ -40,7 +40,7 @@
 
 ;; 保留最近打开的文件
 (recentf-mode 1)
-(setq recentf-max-menu-items 20)
+(setq recentf-max-menu-items 100)
 
 (require 'dired)
 (setq dired-dwim-target t);; 如果分屏显示两个 DiredBuffer 则拷贝就会直接拷贝到另一 DiredBuffer 目录下
@@ -56,7 +56,9 @@
 ;; 文件关联 major-mode
 (setq auto-mode-alist
       (append
-       '(("\\.js\\'" . js2-mode))
+       '(("\\.js\\'" . js2-mode)
+         ("\\.html\\'" . web-mode)
+         ("\\.[agj]sp\\'" . web-mode))
        auto-mode-alist))
 
 ;; 制表符改为空格
