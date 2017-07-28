@@ -8,6 +8,7 @@
 (global-set-key [(control \`)] 'sr-speedbar-toggle)
 (global-set-key (kbd "M-s o") 'occur-dwim)
 (global-set-key (kbd "C-d") 'sp-kill-whole-line)
+(global-set-key (kbd "C-x C-b") 'ibuffer-other-window)
 (define-key help-mode-map (kbd "n") 'next-completion)
 (define-key help-mode-map (kbd "p") 'previous-completion)
 
