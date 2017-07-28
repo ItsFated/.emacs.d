@@ -63,4 +63,7 @@
 (add-hook 'prog-mode-hook (lambda ()
 			    (setq indent-tabs-mode nil)))
 
+;; 修改默认的语言环境为 UTF-8
+(set-language-environment "utf-8")
+
 (provide 'init-better-default)
