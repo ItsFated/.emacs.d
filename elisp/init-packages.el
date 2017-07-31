@@ -16,6 +16,7 @@
                       counsel
                       js2-mode
                       js2-refactor
+                      yasnippet
                       web-mode
                       nodejs-repl
                       idea-darkula-theme
@@ -87,5 +88,9 @@
 (add-hook 'web-mode-hook (lambda ()
                            (setq web-mode-enable-current-element-highlight t)
                            (setq web-mode-enable-current-column-highlight t)))
+
+;; yesnippet
+(setq yas-snippet-dirs '("~/yasnippet-snippets"))
+(yas-global-mode 1)
 
 (provide 'init-packages)
