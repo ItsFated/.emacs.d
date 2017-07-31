@@ -22,6 +22,7 @@
 (global-set-key (kbd "M-j") 'mc/mark-next-like-this)
 (global-set-key (kbd "M-s y") 'youdao-dictionary-search-at-point)
 (js2r-add-keybindings-with-prefix "C-c m")
+
 (add-hook 'js-mode-hook
           (lambda ()
             (define-key js-mode-map (kbd "C-x C-e") 'nodejs-repl-send-last-sexp)
@@ -36,5 +37,12 @@
   (define-key company-active-map (kbd "M-p") nil)
   (define-key company-active-map (kbd "C-n") #'company-select-next)
   (define-key company-active-map (kbd "C-p") #'company-select-previous))
+
+(add-hook 'org-agenda-mode-hook
+          (lambda ()
+            (define-key org-agenda-keymap (kbd "TAB") 'org-agenda-show-and-scroll-up)
+            (define-key org-agenda-keymap (kbd "<tab>") 'org-agenda-show-and-scroll-up)
+            (define-key org-agenda-keymap (kbd "RET") 'org-agenda-goto)
+            (define-key org-agenda-keymap (kbd "SPC") 'org-agenda-switch-to)))
 
 (provide 'init-keybindings)

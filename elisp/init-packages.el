@@ -47,6 +47,7 @@
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
 (setq enable-recursive-minibuffers t)
+(setq counsel-ag-base-command "ag --vimgrep --nocolor --nogroup --ignore-case %s")
 ;; smartparens
 ;; (smartparens-global-mode 1)
 (add-hook 'prog-mode-hook 'smartparens-mode)
