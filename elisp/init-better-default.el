@@ -42,13 +42,10 @@
 (recentf-mode 1)
 (setq recentf-max-saved-items 100)
 
-(require 'dired)
 (setq dired-dwim-target t);; 如果分屏显示两个 DiredBuffer 则拷贝就会直接拷贝到另一 DiredBuffer 目录下
 (setq dired-recursive-deletes 'always);; 递归删除
 (setq dired-recursive-copies 'always);; 递归拷贝
 (put 'dired-find-alternate-file 'disabled nil); 去掉 (dired-find-alternate-file) 函数的警告
-(define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file);在当前DiredBuffer打开文件
-(define-key dired-mode-map (kbd "^") (lambda () (interactive) (find-alternate-file "..")));返回上一层使用当前 DiredBuffer
 
 ;; 设置Speedbar默认显示所有文件
 (with-eval-after-load 'speedbar (setq speedbar-show-unknown-files t))

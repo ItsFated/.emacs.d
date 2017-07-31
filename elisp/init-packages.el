@@ -24,6 +24,7 @@
                       multiple-cursors
                       sr-speedbar
                       youdao-dictionary
+                      markdown-mode
                       flycheck) "Default packages")
 (setq package-selected-packages my-packages)
 (defun install-my-packages ()
@@ -86,12 +87,18 @@
 ;; js2-refactor
 (add-hook 'js2-mode-hook #'js2-refactor-mode)
 ;; web-mode
-(add-hook 'web-mode-hook (lambda ()
-                           (setq web-mode-enable-current-element-highlight t)
-                           (setq web-mode-enable-current-column-highlight t)))
+(add-hook 'web-mode-hook
+          (lambda ()
+            (setq web-mode-enable-current-element-highlight t)
+            (setq web-mode-enable-current-column-highlight t)))
 
 ;; yesnippet
 (setq yas-snippet-dirs '("~/yasnippet-snippets"))
 (yas-global-mode 1)
+
+;; markdown
+(add-hook 'markdown-mode-hook
+          (lambda ()
+            (setq markdown-command "pandoc")))
 
 (provide 'init-packages)

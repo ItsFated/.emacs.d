@@ -23,6 +23,12 @@
 (global-set-key (kbd "M-s y") 'youdao-dictionary-search-at-point)
 (js2r-add-keybindings-with-prefix "C-c m")
 
+(with-eval-after-load 'company
+  (define-key company-active-map (kbd "M-n") nil)
+  (define-key company-active-map (kbd "M-p") nil)
+  (define-key company-active-map (kbd "C-n") #'company-select-next)
+  (define-key company-active-map (kbd "C-p") #'company-select-previous))
+
 (add-hook 'js-mode-hook
           (lambda ()
             (define-key js-mode-map (kbd "C-x C-e") 'nodejs-repl-send-last-sexp)
@@ -32,11 +38,11 @@
             (define-key js-mode-map (kbd "C-c C-z") 'nodejs-repl-switch-to-repl)
             (define-key js-mode-map (kbd "C-c C-c") 'nodejs-repl-quit-or-cancel)))
 
-(with-eval-after-load 'company
-  (define-key company-active-map (kbd "M-n") nil)
-  (define-key company-active-map (kbd "M-p") nil)
-  (define-key company-active-map (kbd "C-n") #'company-select-next)
-  (define-key company-active-map (kbd "C-p") #'company-select-previous))
+(add-hook 'dired-mode-hook
+          (lambda ()
+            (define-key dired-mode-map (kbd "e") 'dired-find-alternate-file);在当前DiredBuffer打开文件
+            (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file);在当前DiredBuffer打开文件
+            (define-key dired-mode-map (kbd "^") (lambda () (interactive) (find-alternate-file "..")))));返回上一层使用当前 DiredBuffer
 
 (add-hook 'org-agenda-mode-hook
           (lambda ()
