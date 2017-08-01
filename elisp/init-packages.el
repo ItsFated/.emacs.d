@@ -25,6 +25,8 @@
                       sr-speedbar
                       youdao-dictionary
                       markdown-mode
+                      ag
+                      zenburn-theme
                       flycheck) "Default packages")
 (setq package-selected-packages my-packages)
 (defun install-my-packages ()

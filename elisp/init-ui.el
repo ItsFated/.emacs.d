@@ -1,5 +1,5 @@
 ;; theme
-(load-theme 'idea-darkula 1)
+(load-theme 'zenburn 1)
 
 ;; 设置字体
 (set-frame-font "YaHei Consolas Hybrid 10")
