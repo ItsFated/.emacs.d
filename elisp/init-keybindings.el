@@ -56,4 +56,8 @@
           (lambda ()
             (define-key java-mode-map (kbd "C-x C-e") 'run-java-main-currently-buffer)))
 
+(add-hook 'markdown-mode-hook
+          (lambda ()
+            (define-key markdown-mode-map (kbd "C-c C-c p") 'markdown-live-preview-switch-to-output)))
+
 (provide 'init-keybindings)
