@@ -27,10 +27,10 @@
   "Compile and run java file"
   (let ((output-buffer "*Java Output*")
         (filename (format "%s" filename)))
-    (if (equal (shell-command (format "javac -encoding %s -d . %s" current-language-environment filename) output-buffer output-buffer) 0)
-        (shell-command (format "java %s" (car (split-string filename "\\."))) output-buffer output-buffer))
     (switch-to-buffer-other-window output-buffer)
-    (help-mode)))
+    (messages-buffer-mode)
+    (if (equal (shell-command (format "javac -d . %s" filename) output-buffer output-buffer) 0)
+        (async-shell-command (format "java %s" (car (split-string filename "\\."))) output-buffer output-buffer))))
 
 (defun run-java-main-currently-buffer ()
   "Compile and run java file use current buffer name"

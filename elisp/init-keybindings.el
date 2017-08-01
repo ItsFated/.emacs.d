@@ -7,8 +7,9 @@
 (global-set-key (kbd "C-z") 'undo)
 (global-set-key [(control \`)] 'sr-speedbar-toggle)
 (global-set-key (kbd "M-s o") 'occur-dwim)
-(global-set-key (kbd "C-d") 'sp-kill-whole-line)
+(global-set-key (kbd "C-d") 'kill-whole-line)
 (global-set-key (kbd "C-x C-b") 'ibuffer-other-window)
+(global-set-key (kbd "C-c q") 'quit-window)
 
 ;; 第三方
 (global-set-key (kbd "C-;") 'mc/mark-all-dwim)
@@ -52,6 +53,7 @@
             (define-key org-agenda-keymap (kbd "SPC") 'org-agenda-switch-to)))
 
 (add-hook 'java-mode-hook
-          (define-key java-mode-map (kbd "C-x C-e") 'run-java-main-currently-buffer))
+          (lambda ()
+            (define-key java-mode-map (kbd "C-x C-e") 'run-java-main-currently-buffer)))
 
 (provide 'init-keybindings)
