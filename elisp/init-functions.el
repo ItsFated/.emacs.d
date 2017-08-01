@@ -23,4 +23,18 @@
         regexp-history)
   (call-interactively 'occur))
 
+(defun run-java-main (filename)
+  "Compile and run java file"
+  (let ((output-buffer "*Java Output*")
+        (filename (format "%s" filename)))
+    (if (equal (shell-command (format "javac -encoding %s -d . %s" current-language-environment filename) output-buffer output-buffer) 0)
+        (shell-command (format "java %s" (car (split-string filename "\\."))) output-buffer output-buffer))
+    (switch-to-buffer-other-window output-buffer)
+    (help-mode)))
+
+(defun run-java-main-currently-buffer ()
+  "Compile and run java file use current buffer name"
+  (interactive)
+  (run-java-main (current-buffer)))
+
 (provide 'init-functions)

@@ -51,4 +51,7 @@
             (define-key org-agenda-keymap (kbd "RET") 'org-agenda-goto)
             (define-key org-agenda-keymap (kbd "SPC") 'org-agenda-switch-to)))
 
+(add-hook 'java-mode-hook
+          (define-key java-mode-map (kbd "C-x C-e") 'run-java-main-currently-buffer))
+
 (provide 'init-keybindings)
