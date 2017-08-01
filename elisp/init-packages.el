@@ -19,14 +19,16 @@
                       yasnippet
                       web-mode
                       nodejs-repl
-                      idea-darkula-theme
                       expand-region
                       multiple-cursors
                       sr-speedbar
                       youdao-dictionary
                       markdown-mode
                       ag
+                      idea-darkula-theme
                       zenburn-theme
+                      material-theme
+                      darktooth-theme
                       flycheck) "Default packages")
 (setq package-selected-packages my-packages)
 (defun install-my-packages ()
@@ -50,7 +52,7 @@
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
 (setq enable-recursive-minibuffers t)
-(setq counsel-ag-base-command "ag --vimgrep --nocolor --nogroup --ignore-case %s")
+
 ;; smartparens
 ;; (smartparens-global-mode 1)
 (add-hook 'prog-mode-hook 'smartparens-mode)

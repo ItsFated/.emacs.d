@@ -4,9 +4,11 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(blink-cursor-mode nil)
- '(company-idle-delay 0)
+ '(company-idle-delay 0.5)
  '(company-minimum-prefix-length 1)
  '(company-tooltip-idle-delay 0)
+ '(counsel-ag-base-command "ag --vimgrep --nocolor --nogroup --ignore-case %s")
+ '(counsel-grep-base-command "grep --color=auto -HinE '%s' %s")
  '(help-window-select t)
  '(speedbar-directory-unshown-regexp "^\\[ \\]&")
  '(speedbar-file-unshown-regexp "^\\[ \\]&")
