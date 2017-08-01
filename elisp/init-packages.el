@@ -57,7 +57,8 @@
 ;; (smartparens-global-mode 1)
 (add-hook 'prog-mode-hook 'smartparens-mode)
 (with-eval-after-load 'smartparens
-  (sp-local-pair '(emacs-lisp-mode lisp-interaction-mode) "'" nil :actions nil))
+  (sp-local-pair '(emacs-lisp-mode lisp-interaction-mode) "'" nil :actions nil)
+  (sp-local-pair '(emacs-lisp-mode lisp-interaction-mode) "`" nil :actions nil))
 
 ;; youdao dictionary
 ;; Enable Cache
