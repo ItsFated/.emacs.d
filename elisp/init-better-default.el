@@ -65,8 +65,8 @@
 ;;;; 设置编辑环境
 ;; 设置为中文简体语言环境
 (set-language-environment 'Chinese-GBK)
-;; 设置emacs 使用 utf-8
-(setq locale-coding-system 'utf-8)
+;; 设置emacs 使用 utf-8 下面这个设置会让通过Emacs指令插入的中文字符变成数字编码(\901)
+;; (setq locale-coding-system 'utf-8)
 ;; 设置键盘输入时的字符编码
 (set-keyboard-coding-system 'utf-8)
 (set-selection-coding-system 'utf-8)
