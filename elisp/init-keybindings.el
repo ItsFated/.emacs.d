@@ -54,7 +54,8 @@
 
 (add-hook 'java-mode-hook
           (lambda ()
-            (define-key java-mode-map (kbd "C-x C-e") 'run-java-main-currently-buffer)))
+            (define-key java-mode-map (kbd "C-x C-e") 'run-java-main-currently-buffer)
+            (define-key java-mode-map (kbd "C-d") 'kill-whole-line)))
 
 (add-hook 'markdown-mode-hook
           (lambda ()
