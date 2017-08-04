@@ -35,6 +35,8 @@
 (defun run-java-main-currently-buffer ()
   "Compile and run java file use current buffer name"
   (interactive)
+  (if (buffer-modified-p (current-buffer))
+      (save-buffer))
   (run-java-main (current-buffer)))
 
 (provide 'init-functions)
