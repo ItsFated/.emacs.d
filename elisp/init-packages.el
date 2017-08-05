@@ -5,7 +5,9 @@
 ;;; Code:
 
 ;; 设置packages的源
-(setq package-archives '(("melpa" . "http://elpa.emacs-china.org/melpa/")))
+(setq package-archives '(("melpa" . "http://elpa.emacs-china.org/melpa/")
+                         ("org" . "http://elpa.emacs-china.org/org/")
+                         ("gnu" . "http://elpa.emacs-china.org/gnu/")))
 
 ;; 自动安装没有安装的Package
 (eval-when-compile (require 'cl))
@@ -14,17 +16,20 @@
                       smartparens
                       swiper
                       counsel
+                      yasnippet
+                      ;; web
+                      web-mode
                       js2-mode
                       js2-refactor
-                      yasnippet
-                      web-mode
                       nodejs-repl
+                      emmet-mode
                       expand-region
                       multiple-cursors
                       sr-speedbar
                       youdao-dictionary
                       markdown-mode
                       ag
+                      ;; theme
                       idea-darkula-theme
                       zenburn-theme
                       material-theme
@@ -96,7 +101,10 @@
           (lambda ()
             (setq web-mode-enable-current-element-highlight t)
             (setq web-mode-enable-current-column-highlight t)))
-
+;; emmet-mode
+(add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
+(add-hook 'css-mode-hook  'emmet-mode) ;; enable Emmet's css abbreviation.
+(add-hook 'web-mode-hook 'emmet-mode)
 ;; yesnippet
 (setq yas-snippet-dirs '("~/yasnippet-snippets"))
 (yas-global-mode 1)
