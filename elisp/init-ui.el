@@ -2,7 +2,7 @@
 (load-theme 'darktooth 1)
 
 ;; 最大化
-(setq initial-frame-alist (quote ((fullscreen . maximized))))
+;; (toggle-frame-maximized)
 
 ;; 全屏
 (toggle-frame-fullscreen)

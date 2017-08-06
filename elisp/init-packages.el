@@ -17,6 +17,7 @@
                       swiper
                       counsel
                       yasnippet
+                      which-key
                       ;; web
                       web-mode
                       js2-mode
@@ -51,7 +52,8 @@
   (dolist (pkg my-packages)
     (when (not (package-installed-p pkg))
       (package-install pkg))))
-
+;; which-key
+(which-key-mode)
 ;; multiple-cursors
 ;; expand-region
 ;; company mode
