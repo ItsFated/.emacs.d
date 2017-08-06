@@ -126,5 +126,6 @@
 
 ;; spaceline
 (spaceline-all-the-icons-theme)
+(spaceline-toggle-all-the-icons-buffer-path-off)
 
 (provide 'init-packages)

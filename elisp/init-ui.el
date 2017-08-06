@@ -1,5 +1,5 @@
 ;; theme
-(load-theme 'darktooth 1)
+(load-theme 'zenburn 1)
 
 ;; 最大化
 ;; (toggle-frame-maximized)
