@@ -29,9 +29,6 @@
 ;; 删除选中的字符
 (delete-selection-mode 1)
 
-;; 全屏
-(setq initial-frame-alist (quote ((fullscreen . maximized))))
-
 ;; 禁止自动备份文件
 (setq make-backup-files nil)
 

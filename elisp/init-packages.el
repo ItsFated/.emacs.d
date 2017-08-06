@@ -34,6 +34,11 @@
                       zenburn-theme
                       material-theme
                       darktooth-theme
+                      all-the-icons
+                      all-the-icons-ivy
+                      all-the-icons-dired
+                      spaceline
+                      spaceline-all-the-icons
                       flycheck) "Default packages")
 (setq package-selected-packages my-packages)
 (defun install-my-packages ()
@@ -113,5 +118,11 @@
 (add-hook 'markdown-mode-hook
           (lambda ()
             (setq markdown-command "pandoc")))
+;; all-the-icons
+(all-the-icons-ivy-setup)
+(add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
+
+;; spaceline
+(spaceline-all-the-icons-theme)
 
 (provide 'init-packages)

@@ -1,6 +1,12 @@
 ;; theme
 (load-theme 'darktooth 1)
 
+;; 最大化
+(setq initial-frame-alist (quote ((fullscreen . maximized))))
+
+;; 全屏
+(toggle-frame-fullscreen)
+
 ;; 设置字体
 (set-frame-font "YaHei Consolas Hybrid 10")
 
