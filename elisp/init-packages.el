@@ -18,6 +18,7 @@
                       counsel
                       yasnippet
                       which-key
+                      winum
                       ;; web
                       web-mode
                       js2-mode
@@ -124,8 +125,24 @@
 (all-the-icons-ivy-setup)
 (add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
 
-;; spaceline
-(spaceline-all-the-icons-theme)
-(spaceline-toggle-all-the-icons-buffer-path-off)
+;; winum-mode
+(setq window-numbering-scope            'global
+      winum-reverse-frame-list          nil
+      winum-auto-assign-0-to-minibuffer t
+      winum-auto-setup-mode-line        t
+      winum-mode-line-position          1
+      winum-ignored-buffers             '(" *which-key*"))
+(setq winum-keymap
+    (let ((map (make-sparse-keymap)))
+      (define-key map (kbd "M-1") 'winum-select-window-1)
+      (define-key map (kbd "M-2") 'winum-select-window-2)
+      (define-key map (kbd "M-3") 'winum-select-window-3)
+      (define-key map (kbd "M-4") 'winum-select-window-4)
+      (define-key map (kbd "M-5") 'winum-select-window-5)
+      (define-key map (kbd "M-6") 'winum-select-window-6)
+      (define-key map (kbd "M-7") 'winum-select-window-7)
+      (define-key map (kbd "M-8") 'winum-select-window-8)
+      map))
+(winum-mode)
 
 (provide 'init-packages)

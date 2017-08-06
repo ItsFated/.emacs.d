@@ -1,6 +1,11 @@
 ;; theme
 (load-theme 'zenburn 1)
 
+;; spaceline
+(spaceline-all-the-icons-theme)
+(spaceline-toggle-all-the-icons-buffer-path-off)
+(spaceline-toggle-all-the-icons-window-number-on)
+
 ;; 最大化
 ;; (toggle-frame-maximized)
 
