@@ -27,11 +27,11 @@
                       emmet-mode
                       expand-region
                       multiple-cursors
-                      sr-speedbar
                       youdao-dictionary
                       markdown-mode
                       ag
                       ;; theme
+                      doom-themes
                       idea-darkula-theme
                       zenburn-theme
                       material-theme
@@ -41,6 +41,8 @@
                       all-the-icons-dired
                       spaceline
                       spaceline-all-the-icons
+                      sr-speedbar
+                      neotree
                       flycheck) "Default packages")
 (setq package-selected-packages my-packages)
 (defun install-my-packages ()
