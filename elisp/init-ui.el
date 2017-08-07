@@ -10,6 +10,7 @@
 ;; (toggle-frame-maximized)
 
 ;; 全屏
+(menu-bar-mode -1)
 (toggle-frame-fullscreen)
 
 ;; 设置字体
