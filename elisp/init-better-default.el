@@ -1,6 +1,8 @@
 ;; 不显示启动画面
 (setq inhibit-splash-screen 1)
 
+(put 'erase-buffer 'disabled nil)
+
 ;; 不显示工具栏
 (tool-bar-mode -1)
 
