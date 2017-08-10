@@ -3,6 +3,7 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+        eval-last-sexp
 	hungry-delete-backward
 	hungry-delete-forward
 	indent-for-tab-command
