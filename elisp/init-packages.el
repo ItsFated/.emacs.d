@@ -40,8 +40,8 @@
                       all-the-icons
                       all-the-icons-ivy
                       all-the-icons-dired
+                      powerline
                       spaceline
-                      spaceline-all-the-icons
                       sr-speedbar
                       neotree
                       flycheck) "Default packages")
@@ -129,14 +129,9 @@
 (add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
 
 ;; winum-mode
-(setq window-numbering-scope            'global
-      winum-reverse-frame-list          nil
-      winum-auto-assign-0-to-minibuffer t
-      winum-auto-setup-mode-line        t
-      winum-mode-line-position          1
-      winum-ignored-buffers             '(" *which-key*"))
 (setq winum-keymap
     (let ((map (make-sparse-keymap)))
+      (define-key map (kbd "M-0") 'winum-select-window-0-or-10)
       (define-key map (kbd "M-1") 'winum-select-window-1)
       (define-key map (kbd "M-2") 'winum-select-window-2)
       (define-key map (kbd "M-3") 'winum-select-window-3)
@@ -146,6 +141,13 @@
       (define-key map (kbd "M-7") 'winum-select-window-7)
       (define-key map (kbd "M-8") 'winum-select-window-8)
       map))
+(setq winum-auto-setup-mode-line        nil
+      window-numbering-scope            'global
+      winum-reverse-frame-list          nil
+      winum-auto-assign-0-to-minibuffer t
+      winum-auto-setup-mode-line        t
+      winum-mode-line-position          1
+      winum-ignored-buffers             '(" *which-key*"))
 (winum-mode)
 
 ;; plantuml-mode
