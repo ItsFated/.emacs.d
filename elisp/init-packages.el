@@ -19,6 +19,7 @@
                       yasnippet
                       which-key
                       winum
+                      plantuml-mode
                       ;; web
                       web-mode
                       js2-mode
@@ -146,5 +147,11 @@
       (define-key map (kbd "M-8") 'winum-select-window-8)
       map))
 (winum-mode)
+
+;; plantuml-mode
+(add-hook
+ 'org-mode-hook
+ (lambda()
+   (add-to-list 'org-src-lang-modes '("plantuml" . plantuml))))
 
 (provide 'init-packages)

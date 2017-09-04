@@ -54,7 +54,9 @@
       (append
        '(("\\.js\\'" . js2-mode)
          ("\\.html\\'" . web-mode)
-         ("\\.[agj]sp\\'" . web-mode))
+         ("\\.[agj]sp\\'" . web-mode)
+         ("\\.plantuml\\'" . plantuml-mode)
+         ("\\.puml\\'" . plantuml-mode))
        auto-mode-alist))
 
 ;; 制表符改为空格
