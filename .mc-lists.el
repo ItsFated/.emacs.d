@@ -4,20 +4,21 @@
 (setq mc/cmds-to-run-for-all
       '(
         eval-last-sexp
-	hungry-delete-backward
-	hungry-delete-forward
-	indent-for-tab-command
-	kill-region
-	org-beginning-of-line
-	org-cycle
-	org-self-insert-command
-	))
+        hungry-delete-backward
+        hungry-delete-forward
+        indent-for-tab-command
+        kill-region
+        org-beginning-of-line
+        org-cycle
+        org-self-insert-command
+        ))
 
 (setq mc/cmds-to-run-once
       '(
-	beginning-of-buffer
-	counsel-M-x
-	end-of-buffer
-	occur-dwim
-	swiper
-	))
+        beginning-of-buffer
+        counsel-M-x
+        end-of-buffer
+        mouse-drag-mode-line
+        occur-dwim
+        swiper
+        ))
