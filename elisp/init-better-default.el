@@ -35,7 +35,7 @@
 (setq make-backup-files nil)
 
 ;; 自动保存文件
-;; (setq auto-save-default nil)
+(setq auto-save-default nil)
 
 ;; 保留最近打开的文件
 (recentf-mode 1)
