@@ -3,6 +3,9 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+        c-electric-paren
+        c-electric-semi&comma
+        c-indent-line-or-region
         eval-last-sexp
         hungry-delete-backward
         hungry-delete-forward
@@ -20,5 +23,6 @@
         end-of-buffer
         mouse-drag-mode-line
         occur-dwim
+        run-java-main-currently-buffer
         swiper
         ))

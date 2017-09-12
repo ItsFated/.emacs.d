@@ -4,6 +4,9 @@
 ;; spaceline or powerline
 (require 'spaceline-config)
 (spaceline-spacemacs-theme)
+(setq display-time-24hr-format t)
+(display-time)
+(display-battery-mode 1)
 
 ;; 最大化
 ;; (toggle-frame-maximized)
