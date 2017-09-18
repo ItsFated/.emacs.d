@@ -9,6 +9,7 @@
 (global-set-key (kbd "M-s o") 'occur-dwim)
 (global-set-key (kbd "C-d") 'kill-whole-line)
 (global-set-key (kbd "C-x C-b") 'ibuffer-other-window)
+(global-set-key (kbd "C-r") 'ivy-switch-buffer)
 (global-set-key (kbd "C-c q") 'quit-window)
 
 ;; 第三方
