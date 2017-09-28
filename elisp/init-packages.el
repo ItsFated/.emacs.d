@@ -20,6 +20,7 @@
                       which-key
                       winum
                       plantuml-mode
+                      magit
                       ;; web
                       web-mode
                       js2-mode
