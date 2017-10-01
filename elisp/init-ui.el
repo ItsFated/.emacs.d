@@ -13,7 +13,8 @@
 
 ;; 全屏
 (menu-bar-mode -1)
-(toggle-frame-fullscreen)
+(toggle-frame-maximized)
+;; (toggle-frame-fullscreen)
 
 ;; 设置字体
 (set-frame-font "YaHei Consolas Hybrid 10")
