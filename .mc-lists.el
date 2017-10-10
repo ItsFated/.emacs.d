@@ -22,7 +22,9 @@
         counsel-M-x
         end-of-buffer
         mouse-drag-mode-line
+        mouse-drag-secondary
         occur-dwim
+        occur-mode-mouse-goto
         run-java-main-currently-buffer
         swiper
         ))

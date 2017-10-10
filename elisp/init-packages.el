@@ -14,6 +14,8 @@
 (defvar my-packages '(company
                       hungry-delete
                       smartparens
+                      helm
+                      helm-ag
                       swiper
                       counsel
                       yasnippet
