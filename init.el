@@ -9,3 +9,5 @@
 ;; File used for storing customization information.
 (setq custom-file "~/.emacs.d/elisp/custome-file.el")
 (load custom-file)
+;; Start Emacs as server
+(server-start)

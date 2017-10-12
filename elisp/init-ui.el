@@ -4,6 +4,8 @@
 ;; spaceline or powerline
 (require 'spaceline-config)
 (spaceline-spacemacs-theme)
+(setq powerline-default-separator 'nil)
+(spaceline-compile)
 (display-battery-mode 1)
 
 ;; 最大化
