@@ -27,7 +27,7 @@
   "Compile and run java file"
   (let ((output-buffer "*Java Output*")
         (filename (format "%s" filename)))
-    (if (equal (shell-command (format "javac -d . %s" filename) output-buffer output-buffer) 0)
+    (if (equal (shell-command (format "javac -d . -encoding %s %s" "utf-8" filename) output-buffer output-buffer) 0)
         (async-shell-command (format "java %s" (car (split-string filename "\\."))) output-buffer output-buffer)
     (progn (switch-to-buffer-other-window output-buffer)
            (messages-buffer-mode)))))
