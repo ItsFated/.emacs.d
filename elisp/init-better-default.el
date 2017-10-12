@@ -67,14 +67,14 @@
 ;; 设置为中文简体语言环境
 (set-language-environment 'Chinese-GBK)
 ;; 设置emacs 使用 utf-8 下面这个设置会让通过Emacs指令插入的中文字符变成数字编码(\901)
-;; (setq locale-coding-system 'utf-8)
+(setq locale-coding-system 'utf-8)
 ;; 设置键盘输入时的字符编码
 ;; (set-keyboard-coding-system 'utf-8)
 ;; (set-selection-coding-system 'utf-8)
 ;; 文件默认保存为 utf-8
-;; (set-buffer-file-coding-system 'utf-8)
-;; (set-default buffer-file-coding-system 'utf8)
-;; (set-default-coding-systems 'utf-8)
+(set-buffer-file-coding-system 'utf-8)
+(set-default buffer-file-coding-system 'utf8)
+(set-default-coding-systems 'utf-8)
 ;; 解决粘贴中文出现乱码的问题
 ;; (set-clipboard-coding-system 'utf-8)
 ;; 终端中文乱码
