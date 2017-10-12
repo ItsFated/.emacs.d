@@ -25,6 +25,10 @@
 (global-set-key (kbd "M-j") 'mc/mark-next-like-this)
 (global-set-key (kbd "M-s y") 'youdao-dictionary-search-at-point)
 (js2r-add-keybindings-with-prefix "C-c m")
+;; magit
+(global-set-key (kbd "M-m g s") 'magit-status)
+(global-set-key (kbd "M-m g l a") 'magit-log-all)
+
 
 (with-eval-after-load 'company
   (define-key company-active-map (kbd "M-n") nil)
