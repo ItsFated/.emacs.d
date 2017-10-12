@@ -12,7 +12,7 @@
 ;; (toggle-frame-maximized)
 
 ;; 全屏
-(menu-bar-mode -1)
+(menu-bar-mode 1)
 (toggle-frame-maximized)
 ;; (toggle-frame-fullscreen)
 
