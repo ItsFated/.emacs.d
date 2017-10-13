@@ -60,6 +60,8 @@
   (dolist (pkg my-packages)
     (when (not (package-installed-p pkg))
       (package-install pkg))))
+;; 直接移除不需要的 packages
+(package-autoremove)
 ;; which-key
 (which-key-mode)
 ;; multiple-cursors
