@@ -20,13 +20,16 @@
 ;; (set-frame-font "YaHei Consolas Hybrid 10")
 ;; Setting English Font
 (set-face-attribute
- 'default nil :font "Consolas 10")
+ 'default nil :font "Inziu Iosevka SC 10")
+;; (set-face-attribute
+;;  'default nil :font "Consolas 10")
 ;; 避免保存的时候出现选择字符集的提示，MiniBuffer显示里Buffers的速度提升
-(set-fontset-font "fontset-default" 'unicode '("Microsoft Yahei" . "unicode-ttf"))
+;; (set-fontset-font "fontset-default" 'unicode '("Microsoft Yahei" . "unicode-ttf"))
+(set-fontset-font "fontset-default" 'unicode '("Inziu Iosevka SC" . "unicode-ttf"))
 ;; Chinese Font
-(dolist (charset '(kana han symbol cjk-misc bopomofo))
-  (set-fontset-font (frame-parameter nil 'font)
-                    charset
-                    (font-spec :family "Microsoft Yahei" :size 14)))
+;; (dolist (charset '(kana han symbol cjk-misc bopomofo))
+  ;; (set-fontset-font (frame-parameter nil 'font)
+                    ;; charset
+                    ;; (font-spec :family "Microsoft Yahei" :size 14)))
 
 (provide 'init-ui)
