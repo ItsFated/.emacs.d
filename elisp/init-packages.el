@@ -35,6 +35,7 @@
                       markdown-mode
                       ag
                       ;; theme
+                      dracula-theme
                       doom-themes
                       idea-darkula-theme
                       zenburn-theme
