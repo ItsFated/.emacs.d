@@ -123,7 +123,7 @@
 (add-hook 'css-mode-hook  'emmet-mode) ;; enable Emmet's css abbreviation.
 (add-hook 'web-mode-hook 'emmet-mode)
 ;; yesnippet
-(setq yas-snippet-dirs '("~/yasnippet-snippets"))
+(setq yas-snippet-dirs '("~/yasnippet-snippets/snippets"))
 (yas-global-mode 1)
 
 ;; markdown
